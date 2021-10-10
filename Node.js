@@ -8,6 +8,7 @@ const app = express();
 const { append } = require("vary");
 const port = process.env.PORT || 3000;
 
+app.use(express.static("public"))
 //image source
 app.use('/images', express.static(__dirname + '/images'));
 
