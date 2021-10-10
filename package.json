@@ -1,4 +1,5 @@
 {
+  "main": "Node.js",
   "scripts": {
     "start": "node Node.js"
   },
