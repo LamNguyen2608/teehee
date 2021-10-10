@@ -18,4 +18,4 @@ app.get('/', (req,res) => {
 app.get('/cart', (req,res) => {
     res.sendFile(__dirname + '/Cart.html');
 });
-app.listen(port, hostname, () => console.log('Listening'));
+app.listen(port, () => console.log('Listening'));
