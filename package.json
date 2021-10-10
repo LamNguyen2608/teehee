@@ -1,9 +1,9 @@
 {
-  "main": "Node.js",
   "scripts": {
-    "start": "node Node.js"
+    "start": "nodemon --inspect Node.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
   }
 }
