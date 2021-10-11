@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const express = require("Express");
 //const handlebars = require("express-handlebars");
-const app = express();
+const app = express.Router();
 const { append } = require("vary");
 const port = process.env.PORT || 3000;
 
