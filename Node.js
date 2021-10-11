@@ -3,8 +3,8 @@ const hostname = "localhost";
 const fs = require("fs");
 const path = require("path");
 const express = require("Express");
-//const handlebars = require("express-handlebars");
 const app = express();
+const router = express.Router();
 const { append } = require("vary");
 const port = process.env.PORT || 3000;
 
@@ -12,22 +12,24 @@ const port = process.env.PORT || 3000;
 app.use('/images', express.static(__dirname + '/images'));
 
 
-app.get('/', (req,res) => {
+router.get('/', (req,res) => {
     res.sendFile(__dirname + '/Index.html');
 });
-app.get('/cart', (req,res) => {
+router.get('/cart', (req,res) => {
     res.sendFile(__dirname + '/Cart.html');
 });
-app.get('/product', (req,res) => {
+router.get('/product', (req,res) => {
     res.sendFile(__dirname + '/Product.html');
 });
-app.get('/signup', (req,res) => {
+router.get('/signup', (req,res) => {
     res.sendFile(__dirname + '/Signup.html');
 });
-app.get('/login', (req,res) => {
+router.get('/login', (req,res) => {
     res.sendFile(__dirname + '/User_login.html');
 });
-app.get('/about', (req,res) => {
+router.get('/about', (req,res) => {
     res.sendFile(__dirname + '/About.html');
 });
+
+app.use("/", router);
 app.listen(port, () => console.log('Listening'));
